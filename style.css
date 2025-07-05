@@ -1,0 +1,62 @@
+/* Using Inter font from Google Fonts, linked in the HTML */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom focus ring color to match the theme */
+.focus\:ring-pink-500:focus {
+    --tw-ring-color: #ec4899;
+}
+
+/* Custom button shadow style */
+#calculateBtn {
+    box-shadow: 0 4px 14px 0 rgba(236, 72, 153, 0.39);
+}
+
+#calculateBtn:hover {
+    box-shadow: 0 6px 20px 0 rgba(236, 72, 153, 0.45);
+}
+
+/* Add a subtle fade-in animation for the result and error divs */
+#result.hidden, #error.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#result, #error {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Toggle Switch Styles --- */
+.toggle-checkbox:checked ~ .toggle-bg {
+    background-color: #ec4899; /* pink-500 */
+}
+
+.toggle-checkbox:checked ~ .dot {
+    transform: translateX(100%);
+}
+
+
+/* Hide the number input spinners for a cleaner look */
+/* For Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
